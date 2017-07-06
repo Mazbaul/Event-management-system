@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 Route::get('/', 'HomeController@index');
 
+Route::resource('/hallmaps', 'HallmapController');

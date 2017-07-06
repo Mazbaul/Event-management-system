@@ -49,7 +49,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </div>
 <script type="text/javascript">
 
-    var locations = <?php print_r(json_encode($event)) ?>;
+   var locations = <?php print_r(json_encode($event)) ?>;
 
     var mymap = new GMaps({
         el: '#mymap',
@@ -68,11 +68,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             },
             infoWindow: {
+                details:'askdasjdkasjdkasd',
                 content: '<p>EVENT </p>' +
-                '<a href="#" class="btn btn-sm btn-primary"><p>BOOK YOUR PLACE</p></a>'
+                '<a href="{{route('hallmaps.index')}}" class="btn btn-flat btn-primary">' +
+                value.name +
+                '<p>BOOK YOUR PLACE</p></a>'
             }
         });
     });
+
 
 
 </script>
