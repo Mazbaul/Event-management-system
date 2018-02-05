@@ -13,10 +13,10 @@ reserve your place in the event
 ## How to Install
 
 #Requirements :
--php>5.6
--mysql
--composer(https://getcomposer.org/download/)
--git
+- php>5.6
+- mysql
+- composer(https://getcomposer.org/download/)
+- git
 
  #Get the source code on your machine via git
  - git clone https://github.com/Mazbaul/Event_reservation.git
