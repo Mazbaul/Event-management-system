@@ -14,7 +14,7 @@ event exposition and reservation system
 
 #Requirements :
 - php>5.6
-- mysql
+- mysql(wamp or xamp)
 - composer(https://getcomposer.org/download/)
 - git
 
