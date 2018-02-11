@@ -24,9 +24,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <body >
 <div class="container">
+  <div class="row">
+      <div  class="col-md-4 col-md-offset-5" >
+      <h2> EVENTS NAME  </h2>
+      <h3> Events Time  </h3>
+      <h3> EVENTS NAME  </h3>
+      <h3> EVENTS NAME  </h3>
+      </div>
+
+  </div>
 
     <div class="row">
-        <div  class="well col-md-4 col-md-offset-1" >
+        <div  class="well col-md-4 col-md-offset-2" >
         <h4> VIP STAND  </h4>
         </div>
         <div  class="well col-md-4 col-md-offset-1" >

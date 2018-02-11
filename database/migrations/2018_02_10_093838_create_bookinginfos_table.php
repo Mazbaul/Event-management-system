@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHallmapsTable extends Migration
+class CreateBookinginfosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,18 @@ class CreateHallmapsTable extends Migration
      */
     public function up()
     {
-        Schema::create('hallmaps', function (Blueprint $table) {
+        Schema::create('bookinginfos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('vip');
-            $table->string('general');
+            $table->string('name');
+            $table->string('email');
+            $table->string('phn_num');
+            $table->string('address');
+            $table->string('type');
             $table->string('event_id');
             $table->timestamps();
         });
 
-        Schema::table('hallmaps', function ($table){
+        Schema::table('bookinginfos', function ($table){
                     $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
                 });
 
@@ -34,6 +37,6 @@ class CreateHallmapsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hallmaps');
+        Schema::dropIfExists('bookinginfos');
     }
 }

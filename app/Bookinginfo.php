@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Hallmap extends Model
+class Bookinginfo extends Model
 {
     //
     public function event()
