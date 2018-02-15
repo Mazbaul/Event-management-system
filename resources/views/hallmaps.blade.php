@@ -36,13 +36,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <div class="row">
         <div  class="well col-md-4 col-md-offset-2" >
+          <h4> VIP STAND  </h4>
           <?php $vip= $hallmap->vip; ?>
           @for($i =1; $i <= $vip; $i++)
 
                       <tr>
 
-                          <td>   sadsd</td>
-                          
+                          <td>  {{$i}}</td>
+
 
                       </tr>
           @endfor
@@ -50,6 +51,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
         <div  class="well col-md-4 col-md-offset-1" >
             <h4> General STAND  </h4>
+            <?php $gn= $hallmap->general; ?>
+            @for($i =1; $i <= $gn; $i++)
+
+                        <tr>
+
+                            <td>{{$i}}</td>
+
+
+                        </tr>
+            @endfor
         </div>
     </div>
     <div class="row">
