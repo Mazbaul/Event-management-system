@@ -63,14 +63,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
             lat: value.lat,
             lng: value.lng,
             title: value.location,
+            name: value.name,
             click: function(e) {
 
 
             },
             infoWindow: {
+
                 details:'askdasjdkasjdkasd',
                 content: '<p>EVENT </p>' +
-                '<a href="{{route('hallmaps.index')}}" class="btn btn-flat btn-primary">' +
+                '<a href="{{route('hallmaps.show','print_r(value.name)' )}}" class="btn btn-flat btn-primary">' +
                 value.name +
                 '<p>BOOK YOUR PLACE</p></a>'
             }

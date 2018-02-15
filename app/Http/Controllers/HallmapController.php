@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+Use App\Event;
+Use App\Hallmap;
 use Illuminate\Http\Request;
 
 class HallmapController extends Controller
@@ -13,7 +14,7 @@ class HallmapController extends Controller
      */
     public function index()
     {
-        return view('hallmaps');
+
     }
 
     /**
@@ -43,9 +44,12 @@ class HallmapController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($request)
     {
         //
+        $event=Event::Where([['name','=',$request]])->get()->pluck('id');
+        $hallmap=Hallmap::Where([['event_id','=',$event]])->first();
+        return view('hallmaps')->withHallmap($hallmap);
     }
 
     /**

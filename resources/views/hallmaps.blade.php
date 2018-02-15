@@ -36,7 +36,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <div class="row">
         <div  class="well col-md-4 col-md-offset-2" >
-        <h4> VIP STAND  </h4>
+          <?php $vip= $hallmap->vip; ?>
+          @for($i =1; $i <= $vip; $i++)
+
+                      <tr>
+
+                          <td>   sadsd</td>
+                          
+
+                      </tr>
+          @endfor
+
         </div>
         <div  class="well col-md-4 col-md-offset-1" >
             <h4> General STAND  </h4>
