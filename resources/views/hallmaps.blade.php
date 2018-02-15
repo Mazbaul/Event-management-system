@@ -35,31 +35,32 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </div>
 
     <div class="row">
-        <div  class="well col-md-4 col-md-offset-2" >
+        <div  class="well col-md-8 col-md-offset-2" >
           <h4> VIP STAND  </h4>
           <?php $vip= $hallmap->vip; ?>
+        <table>
           @for($i =1; $i <= $vip; $i++)
 
-                      <tr>
 
-                          <td>  {{$i}}</td>
+            <div  class="well col-md-2 col-md-offset-2" >
+                          <h3>  {{$i}}</h3>
 
+            </div>
 
-                      </tr>
           @endfor
-
+        </table>
         </div>
-        <div  class="well col-md-4 col-md-offset-1" >
+      </div>
+      <div class="row">
+        <div  class="well col-md-8 col-md-offset-2" >
             <h4> General STAND  </h4>
             <?php $gn= $hallmap->general; ?>
             @for($i =1; $i <= $gn; $i++)
 
-                        <tr>
+            <div  class="well col-md-2 col-md-offset-2" >
+                          <h3>  {{$i}}</h3>
 
-                            <td>{{$i}}</td>
-
-
-                        </tr>
+            </div>
             @endfor
         </div>
     </div>

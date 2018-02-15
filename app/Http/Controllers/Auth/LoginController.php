@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Auth;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -18,10 +20,10 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
-
+  //use AuthenticatesUsers ;
     use AuthenticatesUsers {
-        attemptLogin as attemptLoginAtAuthenticatesUsers;
-    }
+      attemptLogin as attemptLoginAtAuthenticatesUsers;
+   }
 
     /**
      * Show the application's login form.
@@ -75,6 +77,21 @@ class LoginController extends Controller
         return false;
     }
 
+    public function login(Request $request)
+       {
+           // Validate the form data
+           $this->validate($request, [
+               'email' => 'required|email',
+               'password' => 'required|min:6'
+           ]);
+           // Attempt to log the user in
+           if (Auth::guard('web')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember) ) {
+               // if successful, then redirect to their intended location
+               return redirect()->intended(route('welcome'));
+           }
+           // if unsuccessful, then redirect back to the login with the form data
+           return redirect()->back()->withInput($request->only('email', 'remember'));
+       }
     /**
      * Attempt to log the user into application using username as an email.
      *
