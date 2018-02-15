@@ -35,14 +35,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </div>
 
     <div class="row">
-        <div  class="well col-md-8 col-md-offset-2" >
-          <h4> VIP STAND  </h4>
+        <div  class="well col-md-8 col-md-offset-2" style="background-color:#f2dede;">
+          <div class="row" >
+           <div class="col-md-8 col-md-offset-5" >
+            <h4> VIP STAND  </h4>
+          </div>
+          </div>
+
           <?php $vip= $hallmap->vip; ?>
         <table>
           @for($i =1; $i <= $vip; $i++)
 
 
-            <div  class="well col-md-2 col-md-offset-2" >
+            <div  class="well col-md-2 col-md-offset-1" >
                           <h3>  {{$i}}</h3>
 
             </div>
@@ -51,13 +56,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </table>
         </div>
       </div>
-      <div class="row">
-        <div  class="well col-md-8 col-md-offset-2" >
+      <div class="row" >
+        <div  class="well col-md-8 col-md-offset-2" style="background-color:#d9edf7;">
+
+          <div class="row" >
+           <div class="col-md-8 col-md-offset-5" >
             <h4> General STAND  </h4>
+          </div>
+        </div>
             <?php $gn= $hallmap->general; ?>
             @for($i =1; $i <= $gn; $i++)
 
-            <div  class="well col-md-2 col-md-offset-2" >
+            <div  class="well col-md-2 col-md-offset-1" >
                           <h3>  {{$i}}</h3>
 
             </div>
