@@ -1,19 +1,39 @@
 <?php
 
+/*
+ * Taken from
+ * https://github.com/laravel/framework/blob/5.3/src/Illuminate/Auth/Console/stubs/make/controllers/HomeController.stub
+ */
+
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\Event;
+use App\Http\Requests;
+use Illuminate\Http\Request;
 
+/**
+ * Class HomeController
+ * @package App\Http\Controllers
+ */
 class HomeController extends Controller
 {
-
-    public function index()
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-        $event=Event::all();
-        return view('home')->withEvent($event);
+        $this->middleware('guest');
     }
 
-
-
+    /**
+     * Show the application dashboard.
+     *
+     * @return Response
+     */
+    public function index()
+    {
+      $event=Event::all();
+      return view('home')->withEvent($event);
+    }
 }
