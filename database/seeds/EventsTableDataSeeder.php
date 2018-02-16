@@ -11,7 +11,7 @@ class EventsTableDataSeeder extends Seeder
      */
     public function run()
     {
-      DB::table('events')->delete();
+      //DB::table('events')->delete();
   Event::create(array(
     'name' => 'Music concert',
     'location' => 'dhaka',
