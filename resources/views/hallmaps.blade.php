@@ -35,7 +35,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </div>
 
     <div class="row">
-        <div  class="well col-md-8 col-md-offset-2" style="background-color:#f2dede;">
+        <div  class="well col-md-8 col-md-offset-2" style="background-color:#d59bc2;">
           <div class="row" >
            <div class="col-md-8 col-md-offset-5" >
             <h4> VIP STAND  </h4>
@@ -57,7 +57,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
       </div>
       <div class="row" >
-        <div  class="well col-md-8 col-md-offset-2" style="background-color:#d9edf7;">
+        <div  class="well col-md-8 col-md-offset-2" style="background-color:#75c1e2;">
 
           <div class="row" >
            <div class="col-md-8 col-md-offset-5" >
