@@ -12,7 +12,7 @@ class HallmapsTableDataSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('hallmaps')->delete();
+        //DB::table('hallmaps')->delete();
     Hallmap::create(array(
       'vip' => '12',
       'general' => '15',

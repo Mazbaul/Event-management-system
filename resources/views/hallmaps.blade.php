@@ -47,7 +47,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           @for($i =1; $i <= $vip; $i++)
 
            <a href="#">
-            <div  class="well col-md-2 col-md-offset-1" >
+            <div  class="well well-sm col-md-1 col-md-offset-1" >
                           <h3>  {{$i}}</h3>
 
             </div>
@@ -67,7 +67,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <?php $gn= $hallmap->general; ?>
             @for($i =1; $i <= $gn; $i++)
 
-            <a href="#"><div  class="well col-md-2 col-md-offset-1" >
+            <a href="#"><div  class="well well-sm col-md-1 col-md-offset-1" >
                           <h3>  {{$i}}</h3>
 
             </div></a>
