@@ -26,14 +26,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="container">
   <div class="row">
       <div  class="col-md-4 col-md-offset-5" >
-      <h2>{{$hallmap->event->name}}  </h2>
+      <h2> EVENTS NAME  </h2>
+      <h3> Events Time  </h3>
+      <h3> EVENTS NAME  </h3>
+      <h3> EVENTS NAME  </h3>
       </div>
 
-      <div  class="col-md-6 col-md-offset-3" >
-      <h3> Place/Location : {{$hallmap->event->location}} </h3>
-      <h3> Date : {{$hallmap->event->date}}  </h3>
-      <h3> Time :  </h3>
-      </div>
   </div>
 
     <div class="row">
@@ -54,7 +52,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             </div>
           </a>
-
           @endfor
         </table>
         </div>

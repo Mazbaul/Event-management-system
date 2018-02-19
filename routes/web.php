@@ -15,6 +15,7 @@ Route::get('/home', function () {
     return view('adminlte::home');
 })->name('welcome');
 Route::get('/', 'HomeController@index');
+Route::post('/event/{id}', 'ReservationController@index');
 Route::resource('/hallmaps', 'HallmapController');
 
 Route::group(['middleware' => 'auth'], function () {

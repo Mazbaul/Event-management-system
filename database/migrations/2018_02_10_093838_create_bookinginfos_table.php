@@ -21,6 +21,7 @@ class CreateBookinginfosTable extends Migration
             $table->string('address');
             $table->string('type');
             $table->string('event_id');
+            $table->string('seat_num');
             $table->timestamps();
         });
 
