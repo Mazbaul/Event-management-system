@@ -31,8 +31,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
       <div  class="col-md-6 col-md-offset-3" >
       <h3> Place/Location : {{$hallmap->event->location}} </h3>
-      <h3> Date : {{$hallmap->event->date}}  </h3>
-      <h3> Time :  </h3>
+      <h3> Date :{{date('M j, Y',strtotime($hallmap->event->date))}}</td>
+ </h3>
+      <h3> Time :  {{date('h:i a',strtotime($hallmap->event->time))}}</h3>
       </div>
   </div>
 

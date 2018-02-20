@@ -15,6 +15,10 @@ Route::get('/home', function () {
     return view('adminlte::home');
 })->name('welcome');
 Route::get('/', 'HomeController@index');
+Route::get('/admin/createevent', 'AdminController@index')->name('createevent');
+Route::post('/admin/createevent', 'AdminController@store')->name('createevent.store');
+
+
 Route::post('/event/{id}', 'ReservationController@index');
 Route::resource('/hallmaps', 'HallmapController');
 
