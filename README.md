@@ -5,6 +5,7 @@ event exposition and reservation system
 - Location indicator in google maps
 - navigate through events hall maps
 - reserve your place in the event
+- Admin login and dashboard
 
 ## How to Install
 
