@@ -55,7 +55,7 @@
 													 <td>{{date('h:i a',strtotime($event->time))}}</td>
 													 <td>{{$event->hallmap->vip}}</td>
 													 <td>{{$event->hallmap->general}}</td>
-												   <td><a href="#" class="btn btn-sm btn-primary">Reservation Details</a> </td>
+												   <td><a href="#" class="btn btn-sm btn-primary btn-block">Reservation Details</a> </td>
 
 
                         </tr>
