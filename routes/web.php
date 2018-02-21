@@ -12,7 +12,7 @@
 */
 
 Route::get('/home', function () {
-    return view('adminlte::home');
+    return view('adminlte::home')->withEvents($events=App\Event::orderBy('id', 'desc')->paginate(3));
 })->name('welcome');
 Route::get('/', 'HomeController@index');
 Route::get('/admin/createevent', 'AdminController@index')->name('createevent');
