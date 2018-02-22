@@ -45,6 +45,26 @@
                 </ul>
             </li>-->
         </ul><!-- /.sidebar-menu -->
+
+       <ul class="sidebar-menu">
+        <li class="">
+
+
+                <a href="{{ url('/logout') }}" class="btn btn-primary btn-block" id="logout"
+                   onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                    <span>Logout</span>
+                </a>
+
+                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                    <input type="submit" value="logout" style="display: none;">
+                </form>
+
+
+        </li>
+
+      </ul>
     </section>
     <!-- /.sidebar -->
 </aside>
