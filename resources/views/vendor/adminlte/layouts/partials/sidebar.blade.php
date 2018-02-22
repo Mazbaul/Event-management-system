@@ -53,7 +53,7 @@
                 <a href="{{ url('/logout') }}" class="btn btn-primary btn-block" id="logout"
                    onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
-                  <i class='fa fa-sign-out'></i>  <span>Logout</span>
+                  <i class='fa fa-sign-out'></i>  <span>Log Out</span>
                 </a>
 
                 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
