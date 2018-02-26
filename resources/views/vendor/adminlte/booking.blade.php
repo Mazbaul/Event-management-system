@@ -42,8 +42,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             {{ Form::label('address', 'Address:') }}
             {{ Form::text('address', null, ['class' => 'form-control','placeholder'=>'type parmanent address']) }}
 
+            {{ Form::label('email', 'Email:') }}
+            {{ Form::email('email', null, ['class' => 'form-control','placeholder'=>'type email address']) }}
 
-
+             {{ Form::hidden('event_id', $hallmap->event_id) }}
+             {{ Form::hidden('seat', $seat) }}
+             {{ Form::hidden('type', $type) }}
+             {{ Form::hidden('eventname', $hallmap->event->name) }}
 
 						{{ Form::label('phone', 'phone number:') }}
             {{ Form::number('phone', null, ['class' => 'form-control','placeholder'=>'type phone Number']) }}

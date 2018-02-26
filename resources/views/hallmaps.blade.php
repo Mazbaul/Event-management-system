@@ -53,8 +53,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <table>
           @for($i =1; $i <= $vip; $i++)
 
-           <a href="{{route('bookseat',array($eventid,$i,$type))}}">
-            <div  class="well well-sm col-md-1 col-md-offset-1" >
+           <a href="{{ !(App\Bookinginfo::where([['type', '=' ,$type],['event_id','=',$eventid],['seat_num','=',$i]])->count())? route('bookseat',array($eventid,$i,$type)) : ""}}">
+            <div  class="well well-sm col-md-1 col-md-offset-1" style="{{ !(App\Bookinginfo::where([['type', '=' ,$type],['event_id','=',$eventid],['seat_num','=',$i]])->count())? "" : "background-color:#d71149"}}">
                           <h3>  {{$i}}</h3>
 
             </div>
@@ -78,7 +78,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
              ?>
             @for($i =1; $i <= $gn; $i++)
 
-            <a href="{{route('bookseat',array($eventid,$i,$typ))}}"><div  class="well well-sm col-md-1 col-md-offset-1" >
+            <a href="{{ !(App\Bookinginfo::where([['type', '=' ,$typ],['event_id','=',$eventid],['seat_num','=',$i]])->count())? route('bookseat',array($eventid,$i,$type)) : ""}}">
+              <div  class="well well-sm col-md-1 col-md-offset-1" style="{{ !(App\Bookinginfo::where([['type', '=' ,$typ],['event_id','=',$eventid],['seat_num','=',$i]])->count())? "" : "background-color:#d71149"}}">
                           <h3>  {{$i}}</h3>
 
             </div></a>
