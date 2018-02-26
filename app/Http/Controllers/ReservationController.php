@@ -1,15 +1,30 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Event;
+use App\Hallmap;
 use Illuminate\Http\Request;
 
 class ReservationController extends Controller
 {
-  public function index($id)
-  {
-    $event=Event::Where([['name','=',$request]])->get()->pluck('id');
-    $hallmap=Hallmap::Where([['event_id','=',$event]])->first();
-    return view('hallmaps')->withHallmap($hallmap);
-  }
+
+
+    public function reserve($eventid,$seat,$type)
+    {
+
+      $hallmap=Hallmap::Where([['event_id','=',$eventid]])->first();
+
+
+
+       return view('adminlte::booking',compact('hallmap','seat','type'));
+
+     }
+
+     public function store($eventid,$seat,$type)
+     {
+
+
+        return view('adminlte::booking');
+
+      }
 }

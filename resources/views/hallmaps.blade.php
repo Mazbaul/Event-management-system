@@ -45,11 +45,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div>
           </div>
 
-          <?php $vip= $hallmap->vip; ?>
+          <?php
+          $vip= $hallmap->vip;
+          $type='vip';
+          $eventid=$hallmap->event_id;
+           ?>
         <table>
           @for($i =1; $i <= $vip; $i++)
 
-           <a href="#">
+           <a href="{{route('bookseat',array($eventid,$i,$type))}}">
             <div  class="well well-sm col-md-1 col-md-offset-1" >
                           <h3>  {{$i}}</h3>
 
@@ -68,10 +72,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <h4> General STAND  </h4>
           </div>
         </div>
-            <?php $gn= $hallmap->general; ?>
+            <?php $gn= $hallmap->general;
+            $typ='General';
+            $eventid=$hallmap->event_id;
+             ?>
             @for($i =1; $i <= $gn; $i++)
 
-            <a href="#"><div  class="well well-sm col-md-1 col-md-offset-1" >
+            <a href="{{route('bookseat',array($eventid,$i,$typ))}}"><div  class="well well-sm col-md-1 col-md-offset-1" >
                           <h3>  {{$i}}</h3>
 
             </div></a>

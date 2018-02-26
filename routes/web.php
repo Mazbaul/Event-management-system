@@ -19,7 +19,8 @@ Route::get('/admin/createevent', 'AdminController@index')->name('createevent');
 Route::post('/admin/createevent', 'AdminController@store')->name('createevent.store');
 
 
-Route::post('/event/{id}', 'ReservationController@index');
+Route::get('/reserve/{eventid}/{seat}/{type}', 'ReservationController@reserve')->name('bookseat');
+Route::post('/reserve/booking', 'ReservationController@store')->name('bookseat.store');
 Route::resource('/hallmaps', 'HallmapController');
 
 Route::group(['middleware' => 'auth'], function () {
