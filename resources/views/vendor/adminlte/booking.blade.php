@@ -37,16 +37,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
             {!! Form::open(['route' => 'bookseat.store']) !!}
 
             {{ Form::label('name', 'Name:') }}
-            {{ Form::text('name', null, ['class' => 'form-control','placeholder'=>'type student name']) }}
+            {{ Form::text('name', null, ['class' => 'form-control','placeholder'=>'type name']) }}
 
             {{ Form::label('address', 'Address:') }}
-            {{ Form::text('address', null, ['class' => 'form-control','placeholder'=>'type student father name']) }}
+            {{ Form::text('address', null, ['class' => 'form-control','placeholder'=>'type parmanent address']) }}
 
 
 
 
 						{{ Form::label('phone', 'phone number:') }}
-            {{ Form::number('phone', null, ['class' => 'form-control','placeholder'=>'type parmanent address']) }}
+            {{ Form::number('phone', null, ['class' => 'form-control','placeholder'=>'type phone Number']) }}
 
             {{ Form::submit('Submit', array('class' => 'btn btn-primary btn-lg btn-block', 'style' => 'margin-top: 20px;')) }}
             {!! Form::close() !!}
