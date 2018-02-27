@@ -33,6 +33,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
            </div>
            </div>
             <h3>Book <strong>{{$type}}</strong> Seat Number <strong>{{$seat}}</strong> </h3>
+            <div class="row">
+               @if(Session::has('success'))
+                   <div class="alert alert-success col-md-8 col-md-offset-2" role="alert">
+
+                       {{Session::get('success')}}
+                   </div>
+
+
+           @endif
+                   @if ($errors->any())
+             <div class="alert alert-danger col-md-8 col-md-offset-2">
+                 <ul>
+                     @foreach ($errors->all() as $error)
+                         <li>{{ $error }}</li>
+                     @endforeach
+                 </ul>
+             </div>
+           @endif
+
+             </div>
 
             {!! Form::open(['route' => 'bookseat.store']) !!}
 
