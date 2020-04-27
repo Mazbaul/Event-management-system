@@ -27,4 +27,3 @@ event exposition and reservation system
 - php artisan migrate --seed to create and      populate tables
 - php artisan serve to start the app on http://localhost:8000/
 
-Live Project Link:http://sakibalam.me/event/
